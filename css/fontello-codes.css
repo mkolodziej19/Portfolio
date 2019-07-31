@@ -1,0 +1,6 @@
+
+.icon-home:before { content: '\e800'; } /* '' */
+.icon-mail:before { content: '\e801'; } /* '' */
+.icon-picture:before { content: '\e802'; } /* '' */
+.icon-building:before { content: '\f0f7'; } /* '' */
+.icon-chart-line:before { content: '\f201'; } /* '' */
