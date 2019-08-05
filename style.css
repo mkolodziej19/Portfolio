@@ -11,27 +11,27 @@ html {
 }
 
 body{
-	background-image:linear-gradient(hsl(200, 50%, 15%),hsl(60, 50%, 15%),hsl(200, 50%, 15%));
-	color:white;
+	background:#ccc;
+/*	background-image:linear-gradient(hsl(60, 5%, 60%),hsl(60, 30%, 90%),hsl(60, 5%, 60%));*/
+	color:#020;
 }
 
 /*Górny pasek menu*/
 .menu{
+	width:90%;
+	max-width:1084px;
+	margin:auto;
 	margin-top:2px;
 	position:sticky;
 	text-align:center;
 	top:0px;
 	background-color:rgba(0, 0, 0, 0.5);
 	z-index: 1;
+	border-radius:5px;
 }
 
-/*Nieodwiedzony link*/
-a:link{
-	color:yellow;
-}
-
-/*Odwiedzony link*/
-a:visited{
+/*Nieodwiedzony, odwiedzony link*/
+a:link, a:visited{
 	color:yellow;
 }
 
@@ -40,21 +40,32 @@ a:hover{
 /*	text-shadow: 1px 1px 2px grey;*/
 }
 
+p a:link, p a:visited{
+	color:#228;
+}
+
+p a:hover{
+	color:#44f;
+}
+
 /* Pudło, w którym zamknięta jest strona oprócz górnego paska z menu*/
-.box{
+.container{
+	max-width:1084px;
 	width:90%;
-	margin:5%;
+	margin:auto;
 	margin-top:1%;	
+	align:center;
 }
 
 h1{
 /*	font-size:3rem;*/
 	font-size:48px;
 	text-shadow: 5px 5px 5px grey;
+	color:white;
 }
 
 h2{
-	padding-top:100px;
+/*	padding-top:100px;*/
 }
 
 h3{
@@ -69,8 +80,7 @@ h3{
 	background-image:url("https://hjbxjw.bn1303.livefilestore.com/y2pxclj683ndgi-Ugs5JcJBWS0oHBVMdWXxEP6u7JYj9LjxpivNcGii53n1cHV14uYaHiWoqnIszsNfPSHYUvbhFT-5EprcFbznELKxAjnk3U4/landscape.jpg?psid=1");
 	background-size:cover;
   background-position: center;
-	margin:0;
-	padding:0;
+	margin:auto;
 	height:15rem;
 	display:flex;
 	justify-content:right;
@@ -92,13 +102,19 @@ h3{
 	100% {left:0px;}
 }
 
-.header a{
+/*.header a{
 	width:154px;
-}
+}*/
 
 .header img{
-	width:100%;
+/*	width:100%;*/
+	height:13rem;
+	margin-top:1rem;
+	margin-bottom:1rem;
+	margin-right:1rem;
 	position:relative;
+	border-radius:5px;
+	box-shadow: 5px 5px 5px #bbb;
 }
 
 /*Pudło zawierające cztery kafelki*/
@@ -123,7 +139,6 @@ h3{
 
 /*Kafelek*/
 .tile{
-	background:#095;
 	width:48%;
 	height:48%;
 	margin:1%;
@@ -137,10 +152,58 @@ h3{
   transition:all 0.2s;
 }
 
+.t_work{
+	background:#c50;
+}
+
+.t_development{
+	background:#aa0;
+}
+
+.t_interests{
+	background:#5a0;
+}
+
+.t_contact{
+	background:#05a;
+}
+
 .tile:hover {
   background:rgba(0,0,0,0.2);
 	font-weight:800;
 	color:white;
+}
+
+#Work{
+	background-image:linear-gradient(-15deg,#ccc,#ff974d);
+	margin-top:100px;
+	margin-bottom:50px;
+	padding:10px;
+	border-radius:5px;
+}
+
+#Development{
+	background-image:linear-gradient(-15deg,#ccc,#ff6);
+	margin-top:100px;
+	margin-bottom:50px;
+	padding:10px;
+	border-radius:5px;
+}
+
+#Interests{
+	background-image:linear-gradient(-15deg,#ccc,#bfff80);
+	margin-top:100px;
+	margin-bottom:50px;
+	padding:10px;
+	border-radius:5px;
+}
+
+#Contact{
+	background-image:linear-gradient(-15deg,#ccc,#80bfff);
+	margin-top:100px;
+	margin-bottom:50px;
+	padding:10px;
+	border-radius:5px;
 }
 
 p, .list{
@@ -191,7 +254,7 @@ p, .list{
 }
 
 /*Pudło zawierające zdjęcia w świetle widzialnym*/
-.container{
+.containerFoto{
 	display:flex;
 	flex-wrap:wrap;
 	justify-content:center;
@@ -199,7 +262,7 @@ p, .list{
 }
 
 /*Pudło zawierające zdjęcia w podczerwieni. Po najechaniu kursorem zakrywa poprzednie pudło ".container"*/
-.containerP{
+.containerFotoP{
 	top:100px;
 	display:flex;
 	flex-wrap:wrap;
@@ -308,11 +371,11 @@ p, .list{
 	.header >h1{
 		text-align:center;
 	}
-	.header a{
+/*	.header a{
 		margin-right:-30px;
-	}
+	}*/
 	.header img{
-		width:80%;
+		height:11rem;
 	}
 	.square{
   	width:126px;
@@ -331,9 +394,12 @@ p, .list{
 		text-align:center;
 		font-size:1.5rem;
 	}
-	.header a{
+/*	.header a{
 		width:100px;
 		margin-right:-20px;
+	}*/
+	.header img{
+		height:8rem;
 	}
 	.header a h1{
 		font-size:16px;
