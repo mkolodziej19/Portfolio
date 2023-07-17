@@ -1,1 +1,1 @@
-Plik LICENSE.txt zawieta licejncję Fontello.
+Plik LICENSE.txt zawieta licencję Fontello.
